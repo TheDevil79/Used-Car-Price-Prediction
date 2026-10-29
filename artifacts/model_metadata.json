@@ -1,0 +1,158 @@
+{
+  "model_version": "1.0.0",
+  "algorithm": "DecisionTreeRegressor",
+  "parameters": {
+    "max_depth": 6,
+    "min_samples_split": 10,
+    "min_samples_leaf": 5,
+    "random_state": 42
+  },
+  "currency": "USD ($)",
+  "numeric_features": [
+    "year",
+    "odometer"
+  ],
+  "categorical_features": [
+    "make",
+    "condition",
+    "cylinders",
+    "drive",
+    "fuel",
+    "transmission",
+    "type",
+    "title_status",
+    "paint_color"
+  ],
+  "all_supported_features": [
+    "year",
+    "odometer",
+    "make",
+    "condition",
+    "cylinders",
+    "drive",
+    "fuel",
+    "transmission",
+    "type",
+    "title_status",
+    "paint_color"
+  ],
+  "feature_value_domains": {
+    "condition": [
+      "excellent",
+      "fair",
+      "good",
+      "like new",
+      "new",
+      "salvage"
+    ],
+    "cylinders": [
+      "10 cylinders",
+      "12 cylinders",
+      "3 cylinders",
+      "4 cylinders",
+      "5 cylinders",
+      "6 cylinders",
+      "8 cylinders",
+      "other"
+    ],
+    "drive": [
+      "4wd",
+      "fwd",
+      "rwd"
+    ],
+    "fuel": [
+      "diesel",
+      "electric",
+      "gas",
+      "hybrid",
+      "other"
+    ],
+    "transmission": [
+      "automatic",
+      "manual",
+      "other"
+    ],
+    "type": [
+      "bus",
+      "convertible",
+      "coupe",
+      "hatchback",
+      "minivan",
+      "offroad",
+      "other",
+      "pickup",
+      "sedan",
+      "suv",
+      "truck",
+      "van",
+      "wagon"
+    ],
+    "title_status": [
+      "clean",
+      "lien",
+      "missing",
+      "parts only",
+      "rebuilt",
+      "salvage"
+    ],
+    "paint_color": [
+      "black",
+      "blue",
+      "brown",
+      "custom",
+      "green",
+      "grey",
+      "orange",
+      "purple",
+      "red",
+      "silver",
+      "white",
+      "yellow"
+    ],
+    "common_makes": [
+      "ford",
+      "chevrolet",
+      "toyota",
+      "honda",
+      "nissan",
+      "bmw",
+      "mercedes-benz",
+      "jeep",
+      "hyundai",
+      "subaru",
+      "volkswagen",
+      "kia",
+      "dodge",
+      "ram",
+      "gmc",
+      "lexus",
+      "audi",
+      "cadillac",
+      "acura",
+      "chrysler",
+      "mazda",
+      "volvo",
+      "buick",
+      "infiniti",
+      "lincoln",
+      "mitsubishi",
+      "land rover",
+      "porsche",
+      "pontiac",
+      "mini",
+      "jaguar",
+      "saturn",
+      "scion",
+      "fiat",
+      "genesis",
+      "tesla",
+      "mercury"
+    ]
+  },
+  "evaluation_summary": {
+    "val_mae": 9485.58,
+    "val_rmse": 23534.05,
+    "val_r2": 0.0564
+  },
+  "license_notice": "Kaggle Used Car Price Prediction Challenge dataset is subject to competition rules (Non-Commercial, Share-Alike / CC BY-NC-SA 4.0 terms). Suitable for academic and educational evaluation."
+}

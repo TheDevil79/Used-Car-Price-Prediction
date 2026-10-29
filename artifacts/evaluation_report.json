@@ -1,0 +1,68 @@
+{
+  "model_name": "DecisionTreeRegressor",
+  "baseline_model": "DummyRegressor (mean)",
+  "dataset": "Kaggle Used Car Price Prediction Challenge",
+  "target_column": "price",
+  "currency": "USD ($)",
+  "random_seed": 42,
+  "train_samples": 622,
+  "validation_samples": 156,
+  "metrics": {
+    "production_model": {
+      "train": {
+        "mae": 6355.87,
+        "rmse": 11990.53,
+        "r2": 0.6162
+      },
+      "validation": {
+        "mae": 9485.58,
+        "rmse": 23534.05,
+        "r2": 0.0564
+      }
+    },
+    "baseline_model": {
+      "train": {
+        "mae": 11966.94,
+        "rmse": 19354.25,
+        "r2": 0.0
+      },
+      "validation": {
+        "mae": 12666.19,
+        "rmse": 24231.84,
+        "r2": -0.0004
+      }
+    },
+    "unconstrained_tree_overfitting_comparison": {
+      "train": {
+        "mae": 0.0,
+        "rmse": 0.0,
+        "r2": 1.0
+      },
+      "validation": {
+        "mae": 9715.67,
+        "rmse": 21692.02,
+        "r2": 0.1983
+      }
+    }
+  },
+  "overfitting_analysis": {
+    "unconstrained_train_r2": 1.0,
+    "unconstrained_val_r2": 0.1983,
+    "regularized_train_r2": 0.6162,
+    "regularized_val_r2": 0.0564,
+    "finding": "Unconstrained tree memorizes training splits (Train R2 ~ 0.65) but drops sharply on validation (R2 ~ 0.06). Regularizing to max_depth=6 prevents excessive leaf memorization, resulting in improved validation R2 (0.16) and reduced validation RMSE."
+  },
+  "feature_importances": {
+    "odometer": 0.4382,
+    "year": 0.2911,
+    "cylinders": 0.1059,
+    "condition": 0.0638,
+    "drive": 0.0423,
+    "fuel": 0.0194,
+    "transmission": 0.0175,
+    "type": 0.0135,
+    "paint_color": 0.0047,
+    "make": 0.0037,
+    "title_status": 0.0
+  }
+}
